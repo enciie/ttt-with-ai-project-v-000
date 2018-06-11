@@ -13,8 +13,10 @@ def start
       puts "What token do you want? (X or O)"
         if gets.strip.downcase == "x"
           Game.new(Players::Human.new("X"), Players::Computer.new("O"), board = Board.new).play
+          @board.display
         else
           Game.new(Players::Human.new("O"), Players::Computer.new("X"), board = Board.new).play
+          @board.display
         end
     else gets.strip.downcase == "n"
       puts "What token do you want? (X or O)"
