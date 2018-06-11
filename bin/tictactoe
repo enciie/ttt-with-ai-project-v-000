@@ -23,7 +23,6 @@ def start
         else
           Game.new(Players::Computer.new("X"), Players::Human.new("O"), board = Board.new).play
        end
-       @board.display
     end
 
   elsif input == "0"
